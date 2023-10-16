@@ -2691,7 +2691,8 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   margin-top: .6rem;
 }
 #contact button.submitform:hover, #contact button.submitform:focus {
-  background: #f89e0f;
+  background: #0f5fe9;
+  color: white;
 }
 
 #message-warning, #message-success {
@@ -2918,7 +2919,8 @@ footer h4.h05::after {
   top: 0;
 }
 .footer-main #mc-form button:hover {
-  background-color: #f89e0f;
+  background-color: #0f5fe9;
+  color: white;
 }
 .footer-main #mc-form button i {
   font-size: 2.6rem;
@@ -2936,6 +2938,7 @@ footer h4.h05::after {
  * --------------------------------- */
 .footer-bottom {
   margin-top: 3rem;
+  padding-bottom: 1rem;
   text-align: center;
   font-family: "montserrat-regular", sans-serif;
   font-size: 1.4rem;
@@ -2951,6 +2954,13 @@ footer h4.h05::after {
 }
 .footer-bottom .copyright span:last-child::after {
   display: none;
+}
+.x-logo{
+  color: #063c9b;
+}
+
+.link-logo:hover .x-logo{
+  color: white;
 }
 
 #go-top {
@@ -2997,7 +3007,6 @@ footer h4.h05::after {
   background-color: transparent; /* Background color for better visibility */
   cursor: pointer;      /* Cursor style to indicate it's clickable */
 }
-
 .appointment-button{
   border: 2px solid #fff;   /* Border color and width */
   border-radius: 30px;
@@ -3006,15 +3015,26 @@ footer h4.h05::after {
 
 .appointment-scroll{
   position: fixed;       /* Fixed positioning to make it stay in place */
-  right: 0;              /* Push it to the right side of the screen */
+  right: -5px;
   top: 50%;              /* Start it at 50% from the top */
   z-index: 50;
   transform: translateY(-50%);  /* Center it vertically */
-  border: 2px solid #063c9b;   /* Border color and width */
-  border-right: 0px solid #fff;
-  background-color: #063c9b; /* Background color for better visibility */
+  border: 2px solid transparent;   /* Border color and width */
+  border-right: 0px solid transparent;
+  background-color: transparent; /* Background color for better visibility */
   color: #fff;
   transition: all 1s;
+}
+
+.appointment-scroll .appointment-button{
+  border: 2px solid #000; 
+  border-right: 0px solid #fff;   /* Border color and width */
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#home .appointment-scroll{
+  margin: 0;
 }
 
 .appointment button {
