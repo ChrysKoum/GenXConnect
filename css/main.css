@@ -1,9 +1,5 @@
 /* =================================================================== 
  *
- *  Infinity v1.0 Main Stylesheet
- *  01-02-2017
- *  ------------------------------------------------------------------
- *
  *  TOC:
  *  01. webfonts and iconfonts
  *  02. base style overrides
@@ -13,7 +9,7 @@
  *  06. buttons
  *  07. other components
  *  08. common and reusable styles 
- *  09. header styles
+ *  09. header styles#
  *  10. home
  *  11. about
  *  12. services
@@ -1222,6 +1218,16 @@ input::-moz-focus-inner {
   opacity: 1;
 }
 
+.js .animate-this-extra, .js .animate-intro {
+  opacity: 0;
+}
+
+.oldie .animate-this-extra,
+.oldie .animate-intro
+.no-cssanimations .animate-this-extra,
+.no-cssanimations .animate-intro {
+  opacity: 1;
+}
 
 /* ===================================================================
  *  09. header styles - (_layout.scss)
@@ -1508,7 +1514,7 @@ header .header-logo a {
  * ------------------------------------------------------------------- */
 #home {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #151515;
   background-image: url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
@@ -1517,7 +1523,6 @@ header .header-logo a {
   -moz-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 804px;
   position: relative;
 }
 #home .overlay {
@@ -1528,6 +1533,10 @@ header .header-logo a {
   height: 100%;
   opacity: .2;
   background-color: #19191b;
+}
+
+.vh-100{
+  height: 100vh;
 }
 
 .home-content-table {
@@ -1602,6 +1611,26 @@ header .header-logo a {
 .home-social-list li a:focus, 
 .home-social-list li a:active {
   color: #151515;
+}
+
+/* book now */
+.booknow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: right top 0;
+  -ms-transform-origin: right top 0;
+  transform-origin: right top 0;
+  float: right;
+}
+.booknow i {
+  padding-left: 9px;
+}
+.booknow a:hover, .booknow a:focus, .booknow a:active {
+  color: #151515 !important;
 }
 
 /* scroll down */
@@ -1802,14 +1831,19 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   letter-spacing: .3rem;
   position: relative;
 }
-#about h3::before {
+/* #about h3::before {
   display: block;
   content: "";
   width: 3px;
   height: 9.6rem;
   background-color: rgba(149, 149, 149, 0.7);
   margin: 0 auto 2.4rem;
+} */
+#about .image-CEO {
+  border-right: 3px solid rgba(149, 149, 149, 0.7);
+  margin: 0 auto 4rem;
 }
+
 #about .lead {
   font-family: "librebaskerville-bold", serif;
   font-size: 4rem;
@@ -2956,6 +2990,121 @@ footer h4.h05::after {
   background: #000000;
   color: #FFFFFF;
 }
+
+.appointment {
+  color: #fff;       /* Text color */
+  font-weight: 500;
+  background-color: transparent; /* Background color for better visibility */
+  cursor: pointer;      /* Cursor style to indicate it's clickable */
+}
+
+.appointment-button{
+  border: 2px solid #fff;   /* Border color and width */
+  border-radius: 30px;
+  padding: 5px 15px;
+}
+
+.appointment-scroll{
+  position: fixed;       /* Fixed positioning to make it stay in place */
+  right: 0;              /* Push it to the right side of the screen */
+  top: 50%;              /* Start it at 50% from the top */
+  z-index: 50;
+  transform: translateY(-50%);  /* Center it vertically */
+  border: 2px solid #063c9b;   /* Border color and width */
+  border-right: 0px solid #fff;
+  background-color: #063c9b; /* Background color for better visibility */
+  color: #fff;
+  transition: all 1s;
+}
+
+.appointment button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.appointment button.learn-more {
+  width: 25rem;
+  height: auto;
+  background-color: #fff;
+}
+
+.appointment button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65,0,.076,1);
+  position: relative;
+  display: block;
+  margin: 0.1rem 0 0;
+  width: 3rem;
+  height: 3rem;
+  background: #063c9b;
+  border-radius: 1.625rem;
+}
+
+.appointment button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65,0,.076,1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.appointment button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65,0,.076,1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.appointment button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: '';
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.appointment button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65,0,.076,1);
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 2.8;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.appointment button:hover .circle {
+  width: 102%;
+}
+
+.appointment button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+.appointment button:hover .button-text {
+  color: #fff;
+}
+
 
 /* ------------------------------------------------------------------- 
  * responsive:

@@ -9,16 +9,38 @@
 	<!--- basic page needs
    ================================================== -->
 	<meta charset="utf-8">
-	<title>Infinity</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<!-- mobile specific metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>
+		GenXConnect
+	</title>
+	<!-- Behavioral Meta Data -->
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<!-- Core Meta Data -->
+	<meta content="GenXConnect" name="author">
+	<meta
+		content="GenXConnect: Leading technology management consulting services with expertise in software, hardware, embedded systems and more. Transforming businesses with innovative solutions, in Greece, Thessaloniki."
+		name="description">
+	<meta
+		content="GenXConnect, GenX Connect, Greece, Thessaloniki, Tech Management, Consulting, Software Engineering, Hardware Engineering, Embedded Systems, Business Transformation"
+		name="keywords"><!-- Open Graph Meta Data -->
+	<meta
+		content="GenXConnect: Leading technology management consulting services with expertise in software, hardware, embedded systems and more. Transforming businesses with innovative solutions.">
+	<meta content="GenXConnect">
+	<meta content="GenXConnect">
+	<meta content="website">
+	<meta content="index.html"><!-- Twitter Card Meta Data -->
+	<meta content="summary" name="twitter:card">
+	<meta content="@GenXConnect" name="twitter:site">
+	<meta content="@GenXConnect" name="twitter:creator">
+	<meta content="GenXConnect" name="twitter:title">
+	<meta
+		content="GenXConnect: Leading technology management consulting services. Empowering businesses with innovative solutions to stay ahead in the digital landscape."
+		name="twitter:description">
 
 	<!-- CSS
    ================================================== -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/vendor.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -91,7 +113,7 @@
 
 	<!-- home
    ================================================== -->
-	<section id="home">
+	<section id="home" class="vh-100">
 
 		<div class="overlay"></div>
 
@@ -105,11 +127,15 @@
 							We Craft Stunning <br>
 							Digital Experiences.
 						</h1>
-
-						<div class="more animate-intro">
-							<a class="smoothscroll button stroke" href="#about">
-								Learn More
-							</a>
+						<!-- appointment widget
+   ================================================== -->
+						<div class="more appointment animate-intro">
+							<button class="appointment-button learn-more">
+								<span class="circle" aria-hidden="true">
+									<span class="icon arrow"></span>
+								</span>
+								<span class="button-text">BOOK APPOINTMENT</span>
+							</button>
 						</div>
 
 					</div> <!-- end col-twelve -->
@@ -136,9 +162,7 @@
 				<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 			</a>
 		</div>
-
 	</section> <!-- end home -->
-
 
 	<!-- about
    ================================================== -->
@@ -150,11 +174,18 @@
 				<div class="about-profile-bg"></div>
 
 				<div class="intro">
+					<div class="row animate-this">
+						<div class="col-six image-CEO"><img src="images/Co-Founders/Chrysostomos.jpg"
+								alt="Chrysostomos Koumides Image Co-Founders CTO"></div>
+						<div class="col-six"><img src="images/Co-Founders/George_Xen.jpg"
+								alt="George Xenofontos Image Co-Founders COO"></div>
+					</div>
 					<h3 class="animate-this">About Us</h3>
 					<p class="lead animate-this"><span>We Are Gen<span
 								style="color: #063c9b;">X</span>Connect</span><br>
 						Your Success, Our
 						Blueprint.</p>
+
 					<p class="description-lead animate-this">Based in the heart of
 						Thessaloniki, Greece, we pride ourselves on our unique two CEO model. This guarantees faster,
 						more efficient
@@ -535,7 +566,7 @@
 
 		<div class="overlay"></div>
 
-		<div class="row narrow section-intro with-bottom-sep animate-this">
+		<div class="row narrow section-intro with-bottom-sep animate-this-extra">
 			<div class="col-twelve">
 				<h3>Contact</h3>
 				<h1>Get In Touch.</h1>
@@ -551,7 +582,7 @@
 
 		<div class="row contact-content">
 
-			<div class="col-seven tab-full animate-this">
+			<div class="col-seven tab-full animate-this-extra">
 
 				<h5>Send Us A Message</h5>
 
@@ -608,7 +639,7 @@
 
 			</div> <!-- end col-seven -->
 
-			<div class="col-four tab-full contact-info end animate-this">
+			<div class="col-four tab-full contact-info end animate-this-extra">
 
 				<h5>Contact Information</h5>
 
@@ -730,6 +761,9 @@
 
 	<!-- Java Script
    ================================================== -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
 	<script src="js/jquery-2.1.3.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
