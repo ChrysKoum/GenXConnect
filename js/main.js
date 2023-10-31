@@ -4,7 +4,7 @@
  * ------------------------------------------------------------------- */
 
 (function ($) {
-  ("use strict");
+  "use strict";
 
   var cfg = {
       defAnimation: "fadeInUp", // default css animation
@@ -127,7 +127,7 @@
     var appointmentTrigger = $(".appointment");
 
     $WIN.on("scroll", function () {
-      if ($WIN.scrollTop() > 500) {
+      if ($WIN.scrollTop() > 600) {
         appointmentTrigger.addClass("appointment-scroll");
       } else {
         appointmentTrigger.removeClass("appointment-scroll");

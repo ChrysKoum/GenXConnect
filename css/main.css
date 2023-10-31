@@ -2974,9 +2974,9 @@ footer h4.h05::after {
   text-decoration: none;
   border: 0 none;
   display: block;
-  height: 63px;
-  width: 60px;
-  line-height: 63px;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
   text-align: center;
   background-color: #000000;
   color: #888;
@@ -2997,8 +2997,10 @@ footer h4.h05::after {
   color: #888;
 }
 #go-top a:hover, #go-top a:focus {
-  background: #000000;
-  color: #FFFFFF;
+  background: #063c9b;
+  font-size: 4rem;
+  color: #fff;
+  line-height: 45px;
 }
 
 .appointment {
