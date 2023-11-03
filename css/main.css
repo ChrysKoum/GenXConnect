@@ -2075,11 +2075,17 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 #portfolio .bricks-wrapper .brick {
   float: left;
   width: 50%;
-  padding: 0;
   margin: 0;
 }
 #portfolio .bricks-wrapper .brick:nth-child(2n+1) {
   clear: both;
+  border-left: 20px solid #111111;
+  border-top: 20px solid #111111;
+  border-bottom: 20px solid #111111;
+}
+#portfolio .bricks-wrapper .brick:nth-child(2n) {
+  clear: both;
+  border: 20px solid #111111;
 }
 
 /* ------------------------------------------------------------------- 
@@ -2523,7 +2529,6 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 #clients .owl-carousel .owl-dots .owl-dot {
   display: inline-block;
   zoom: 1;
-  *display: inline;
 }
 #clients .owl-carousel .owl-dots .owl-dot span {
   width: 9px;
