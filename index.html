@@ -55,6 +55,10 @@
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 	<link rel="icon" href="favicon.png" type="image/x-icon">
 
+	<!-- Calendly link widget begin -->
+	<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+	<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
 </head>
 
 <body id="top">
@@ -129,13 +133,15 @@
 						<!-- appointment widget
    ================================================== -->
 						<div class="more appointment animate-intro">
-							<button class="appointment-button learn-more" data-bs-toggle="modal"
-								data-bs-target="#myModal">
-								<span class="circle" aria-hidden="true">
-									<span class="icon arrow"></span>
-								</span>
-								<span class="button-text">BOOK APPOINTMENT</span>
-							</button>
+							<a href=""
+								onclick="Calendly.initPopupWidget({url: 'https://calendly.com/genxconnect/30min'});return false;"><button
+									class="appointment-button learn-more">
+									<!--data-bs-toggle="modal" data-bs-target="#myModal" is for Tally -->
+									<span class="circle" aria-hidden="true">
+										<span class="icon arrow"></span>
+									</span>
+									<span class="button-text">BOOK APPOINTMENT</span>
+								</button></a>
 						</div>
 
 					</div> <!-- end col-twelve -->
@@ -164,9 +170,9 @@
 		</div>
 	</section> <!-- end home -->
 
-	<!-- Booking iframe  -->
+	<!-- Booking iframe  with Tally-->
 	<!-- The Pop-Up Modal -->
-	<div class="modal fade" id="myModal">
+	<!-- <div class="modal fade" id="myModal">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -182,8 +188,27 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
+	<!-- Booking iframe with Calendly-->
+	<!-- The Pop-Up Modal -->
+	<!-- <div class="modal fade" id="myModal">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Book Appointment</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="calendly-inline-widget" data-url="https://calendly.com/genxconnect/30min"
+						style="min-width:320px;height:600px;"></div>
+					<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
+						async></script>
+	
+				</div>
+			</div>
+		</div>
+	</div>  -->
 
 	<!-- about
    ================================================== -->
