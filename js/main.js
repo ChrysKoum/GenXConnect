@@ -124,6 +124,7 @@
     });
   };
   var ssAppointementOnScrolldown = function () {
+    var $WIN = $(window);
     var appointmentTrigger = $(".appointment");
 
     $WIN.on("scroll", function () {
@@ -132,6 +133,35 @@
       } else {
         appointmentTrigger.removeClass("appointment-scroll");
       }
+      var updateAppointmentButton = function () {
+        if ($WIN.width() < 600 && $WIN.scrollTop() > 600) {
+          // Update HTML
+          appointmentTrigger.html(
+            '<button class="appointment-button learn-more" data-bs-toggle="modal" data-bs-target="#myModal"><img class="circle" src="images/book-appointment-icon-21.jpg"></button>'
+          );
+
+          // Update CSS
+          $(".appointment button.learn-more").css("width", "6rem");
+          $(".appointment-button .button-text").css("display", "none");
+        } else {
+          // Revert to original HTML
+          appointmentTrigger.html(
+            '<button class="appointment-button learn-more" data-bs-toggle="modal" data-bs-target="#myModal"><span class="circle" aria-hidden="true"><span class="icon arrow"></span></span><span class="button-text">BOOK APPOINTMENT</span></button>'
+          );
+
+          // Revert to original CSS
+          $(".appointment button.learn-more").css("width", "25rem");
+          $(".appointment-button .button-text").css("display", "inline");
+        }
+      };
+
+      // Call the function initially
+      updateAppointmentButton();
+    });
+
+    // Call the function on window resize
+    $WIN.on("resize", function () {
+      updateAppointmentButton();
     });
   };
   /* OffCanvas Menu
