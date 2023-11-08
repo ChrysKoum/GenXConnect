@@ -72,7 +72,7 @@ body {
  * links - (_document-setup) 
  * ------------------------------------------------------------------- */
 a, a:visited {
-  color: #063c9b;
+  
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -628,7 +628,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  color: #000000;
+  color: #ffffff;
 }
 
 label, legend {
@@ -817,6 +817,33 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
+/* ===================================================================
+ *  06a. Buttons Services
+ *
+ * ------------------------------------------------------------------- */
+
+ .button-container {
+  margin-top: 20px;
+}
+
+.learn-more-button {
+  background-color: #063c9b;
+  border: none;
+  color: white;
+  padding: 7px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 5px 5px;
+  cursor: pointer;
+  border-radius: 18px;
+}
+
+.learn-more-button:hover {
+  background-color: #0f0e0e;
+  color: white;
+}
 
 /* ===================================================================
  *  07. other components - (_others.scss)
@@ -1853,6 +1880,20 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 
 /* ------------------------------------------------------------------- 
+ * design:
+ * about photo
+ * ------------------------------------------------------------------- */
+
+ .intro .row .col-six img {
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.intro .row .col-six:hover img {
+  transform: scale(1.2); /* Zoom in */
+}
+
+
+/* ------------------------------------------------------------------- 
  * responsive:
  * about 
  * ------------------------------------------------------------------- */
@@ -1994,6 +2035,8 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   color: #FFFFFF;
   margin-bottom: 3rem;
 }
+
+
 
 /* ------------------------------------------------------------------- 
  * responsive:
