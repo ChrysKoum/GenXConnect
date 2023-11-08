@@ -1515,6 +1515,29 @@ header .header-logo a {
 #home {
   width: 100%;
   height: 100vh;
+  position: relative;
+  overflow: hidden; /* Prevents video overflowing the container */
+}
+
+#home video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -5;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+ /* #home {
+  width: 100%;
+  height: 100vh;
   background-color: #151515;
   background-image: url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
@@ -1534,10 +1557,10 @@ header .header-logo a {
   opacity: .2;
   background-color: #19191b;
 }
-
-.vh-100{
+ */
+/* .vh-100{
   height: 100vh;
-}
+} */
 
 .home-content-table {
   width: 100%;
