@@ -3271,6 +3271,7 @@ footer h4.h05::after {
 }
 
 .list-links i {
+    margin-bottom: 1rem;
     font-size: 24px; /* Adjust icon size */
     width: 40px; /* Set width for better alignment */
     color: white; /* Initial icon color */
