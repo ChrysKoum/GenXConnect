@@ -3205,7 +3205,7 @@ footer h4.h05::after {
   margin: 0 0 0 1.85rem;
   color: #282936;
   font-weight: 700;
-  line-height: 2.8;
+  line-height: 2.6;
   text-align: center;
   text-transform: uppercase;
   font-size: 10px;
@@ -3224,7 +3224,88 @@ footer h4.h05::after {
   color: #fff;
 }
 
+#nl-button{
+    border-radius: 50px;
+    background-color: #0f5fe9;
+    width: 260px;
+    height: 5.9rem;
+    padding: 0;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 
+}
+#nl-button:hover{
+  background-color: #0f5fe9;
+  color: white;
+
+}
+#input-newsletter{
+  margin-top: 0.15rem;
+  height: 5.5rem;
+  border: white!important;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#input-newsletter:focus{
+  color: white;
+  border: grey;
+  background-color: #0F1215;
+}
+
+.list-links {
+    list-style: none;
+    padding: 0;
+}
+
+.list-links li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.list-links li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.list-links i {
+    font-size: 24px; /* Adjust icon size */
+    width: 40px; /* Set width for better alignment */
+    color: white; /* Initial icon color */
+    transition: color 0.3s ease; /* Transition for color change */
+    text-align: center;
+}
+
+.list-links li a:hover i.fa-linkedin { color: #0077b5; }
+.list-links li a:hover i.fa-instagram { color: #C13584; }
+.list-links li a:hover i.fa-facebook { color: #3b5998; }
+
+.list-links li a .social-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0px; /* Distance from icon */
+    white-space: nowrap;
+    background-color: rgba(255, 255, 255, 0.7); /* Background color with some transparency */
+    padding: 5px 15px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the background */
+    transition: opacity 0.3s ease, visibility 0.3s ease, left 0.3s ease, background-color 0.3s ease;
+    margin-left: 0px;
+    text-align: center;
+    width: 150px;
+}
+
+.list-links li a:hover .social-text {
+    visibility: visible;
+    opacity: 1;
+    left: 40px;
+}
+
+.list-links li a:hover .x-linkedin{ background-color: #0077b5; }
+.list-links li a:hover .x-instagram{ background-color: #C13584; }
+.list-links li a:hover .x-facebook{ background-color: #3b5998; }
 /* ------------------------------------------------------------------- 
  * responsive:
  * footer
