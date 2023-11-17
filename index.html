@@ -650,7 +650,7 @@
 				<h5>Send Us A Message</h5>
 
 				<!-- form -->
-				<form name="contactForm" id="contactForm" method="post">
+				<form action="https://formspree.io/f/xpzgejek" method="POST" name="contactForm">
 
 					<div class="form-field">
 						<input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2"
@@ -772,13 +772,26 @@
 					<p>Stay updated with our latest innovations and offerings. Subscribe now and dive into the future
 						with GenXConnect.
 					</p>
+
+
 					<div class="subscribe-form">
-						<form id="mc-form" class="group" novalidate="true">
+						<form
+							action="https://genx-connect.us11.list-manage.com/subscribe/post?u=d98388aa7a27b4b894717d1bd&amp;id=52385f1b6a&amp;f_id=00c2abe0f0"
+							method="post" id="mc-form" class="group" novalidate="true">
 							<input type="email" value="" name="dEmail" class="email" id="mc-email"
 								placeholder="type email" required="">
-							<button><i class="icon-mail"></i></button>
-							<label for="mc-email" class="subscribe-message"></label>
+							<input id="nl-button" type="submit" value="ΕΓΓΡΑΦΕΙΤΕ" class="form-control submit px-3">
 						</form>
+						<form id="mailchimp-form"
+							action="https://genx-connect.us11.list-manage.com/subscribe/post?u=d98388aa7a27b4b894717d1bd&amp;id=52385f1b6a&amp;f_id=00c2abe0f0"
+							method="post" class="subscribe-form">
+							<div class="form-group d-flex">
+								<input type="text" name="EMAIL" class="form-control rounded-left"
+									placeholder="Εισάγετε διεύθυνση email">
+								<input id="nl-button" type="submit" value="ΕΓΓΡΑΦΕΙΤΕ" class="form-control submit px-3">
+							</div>
+						</form>
+
 					</div>
 				</div> <!-- end footer-subscribe -->
 
