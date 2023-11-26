@@ -133,20 +133,30 @@
       } else {
         appointmentTrigger.removeClass("appointment-scroll");
       }
+
       var updateAppointmentButton = function () {
         if ($WIN.width() < 600 && $WIN.scrollTop() > 600) {
-          // Update HTML
+          // Update HTML for mobile view
           appointmentTrigger.html(
-            '<button class="appointment-button learn-more" data-bs-toggle="modal" data-bs-target="#myModal"><img class="circle" src="images/book-appointment-icon-21.jpg"></button>'
+            '<a href="" onclick="Calendly.initPopupWidget({url: \'https://calendly.com/genxconnect/30min\'});return false;">' +
+              '<button class="appointment-button learn-more">' +
+              '<img class="circle" src="images/book-appointment-icon-21.jpg">' +
+              "</button></a>"
           );
 
-          // Update CSS
+          // Update CSS for mobile view
           $(".appointment button.learn-more").css("width", "6rem");
           $(".appointment-button .button-text").css("display", "none");
         } else {
           // Revert to original HTML
           appointmentTrigger.html(
-            '<button class="appointment-button learn-more" data-bs-toggle="modal" data-bs-target="#myModal"><span class="circle" aria-hidden="true"><span class="icon arrow"></span></span><span class="button-text">BOOK APPOINTMENT</span></button>'
+            '<a href="" onclick="Calendly.initPopupWidget({url: \'https://calendly.com/genxconnect/30min\'});return false;">' +
+              '<button class="appointment-button learn-more">' +
+              '<span class="circle" aria-hidden="true">' +
+              '<span class="icon arrow"></span>' +
+              "</span>" +
+              '<span class="button-text">BOOK APPOINTMENT</span>' +
+              "</button></a>"
           );
 
           // Revert to original CSS
@@ -164,6 +174,7 @@
       updateAppointmentButton();
     });
   };
+
   /* OffCanvas Menu
    * ------------------------------------------------------ */
   var ssOffCanvas = function () {
