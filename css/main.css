@@ -3198,6 +3198,15 @@ footer h4.h05::after {
   color: #fff;
 }
 
+/* Button disabled -----------*/
+
+.learn-more-button.disabled {
+  color: grey;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+/* ----------------------------- */
 
 /* ------------------------------------------------------------------- 
  * responsive:

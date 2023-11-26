@@ -336,6 +336,36 @@
     });
   };
 
+/* Services Buttons 
+   * ------------------------------------------------------ */
+// disabled buttons
+document.addEventListener('DOMContentLoaded', function () {
+  var disabledLinks = document.querySelectorAll('.learn-more-button.disabled');
+
+  disabledLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+          e.preventDefault();
+      });
+  });
+});
+
+// responsive PDf for the buttons
+document.addEventListener('DOMContentLoaded', function () {
+  var learnMoreButton = document.getElementById('learnMoreButton');
+
+  function updateButtonLink() {
+      var screenWidth = window.innerWidth;
+      if (screenWidth <= 768) { // Assuming 768px as a breakpoint for mobile devices
+          learnMoreButton.href = 'PDF/Google My Business Phone.pdf';
+      } else {
+          learnMoreButton.href = 'PDF/Google My Business.pdf';
+      }
+  }
+
+  updateButtonLink();
+  window.addEventListener('resize', updateButtonLink); // Update the link on window resize
+});
+
   /* Contact Form
    * ------------------------------------------------------ */
   var ssContactForm = function () {
