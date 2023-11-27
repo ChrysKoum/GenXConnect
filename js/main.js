@@ -380,6 +380,10 @@
     window.addEventListener("resize", updateButtonLink); // Update the link on window resize
   });
 
+  $(".details-link").on("click", function (event) {
+    event.stopPropagation();
+  });
+
   /* Contact Form
    * ------------------------------------------------------ */
   var ssContactForm = function () {

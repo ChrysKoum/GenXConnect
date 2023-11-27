@@ -2086,6 +2086,16 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   display: inline-block;
   margin-bottom: 1.5rem;
 }
+#services .services-list .WD .icon{
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+#services .services-list .WD .button-container{
+  margin-top: 12rem;
+}
+
+
 #services .services-list .icon i {
   font-size: 5.4rem;
   color: #063c9b;
@@ -2114,6 +2124,9 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   }
 }
 @media only screen and (max-width: 768px) {
+  #services .services-list .WD .button-container{
+    margin-top: 3rem;
+  }
   #services {
     padding: 12rem 0 12rem;
   }
@@ -2335,7 +2348,9 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
-
+.lg-download{
+  display: none;
+}
 /* ------------------------------------------------------------------- 
  * Light Gallery Overrides - (_layout.css) 
  * ------------------------------------------------------------------- */
