@@ -10,7 +10,7 @@
       defAnimation: "fadeInUp", // default css animation
       scrollDuration: 800, // smoothscroll duration
       mailChimpURL:
-        "http://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e65110b38d",
+        "https://genx-connect.us11.list-manage.com/subscribe/post?u=d98388aa7a27b4b894717d1bd&amp;id=52385f1b6a",
     },
     $WIN = $(window);
 
@@ -347,35 +347,38 @@
     });
   };
 
-/* Services Buttons 
+  /* Services Buttons
    * ------------------------------------------------------ */
-// disabled buttons
-document.addEventListener('DOMContentLoaded', function () {
-  var disabledLinks = document.querySelectorAll('.learn-more-button.disabled');
+  // disabled buttons
+  document.addEventListener("DOMContentLoaded", function () {
+    var disabledLinks = document.querySelectorAll(
+      ".learn-more-button.disabled"
+    );
 
-  disabledLinks.forEach(function (link) {
-      link.addEventListener('click', function (e) {
-          e.preventDefault();
+    disabledLinks.forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
       });
+    });
   });
-});
 
-// responsive PDf for the buttons
-document.addEventListener('DOMContentLoaded', function () {
-  var learnMoreButton = document.getElementById('learnMoreButton');
+  // responsive PDf for the buttons
+  document.addEventListener("DOMContentLoaded", function () {
+    var learnMoreButton = document.getElementById("learnMoreButton");
 
-  function updateButtonLink() {
+    function updateButtonLink() {
       var screenWidth = window.innerWidth;
-      if (screenWidth <= 768) { // Assuming 768px as a breakpoint for mobile devices
-          learnMoreButton.href = 'PDF/Google My Business Phone.pdf';
+      if (screenWidth <= 768) {
+        // Assuming 768px as a breakpoint for mobile devices
+        learnMoreButton.href = "PDF/Google My Business Phone.pdf";
       } else {
-          learnMoreButton.href = 'PDF/Google My Business.pdf';
+        learnMoreButton.href = "PDF/Google My Business.pdf";
       }
-  }
+    }
 
-  updateButtonLink();
-  window.addEventListener('resize', updateButtonLink); // Update the link on window resize
-});
+    updateButtonLink();
+    window.addEventListener("resize", updateButtonLink); // Update the link on window resize
+  });
 
   /* Contact Form
    * ------------------------------------------------------ */
@@ -442,7 +445,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     $.ajaxChimp.translations.es = {
       submit: "Submitting...",
-      0: '<i class="fa fa-check"></i> We have sent you a confirmation email',
+      0: '<i class="fa fa-check"></i> You are Subscribed!!',
       1: '<i class="fa fa-warning"></i> You must enter a valid e-mail address.',
       2: '<i class="fa fa-warning"></i> E-mail address is not valid.',
       3: '<i class="fa fa-warning"></i> E-mail address is not valid.',

@@ -828,7 +828,7 @@ input::-moz-focus-inner {
 
 .learn-more-button {
   background-color: #063c9b;
-  border: none;
+  border: 1px solid transparent;
   color: white;
   padding: 7px 30px;
   text-align: center;
@@ -840,7 +840,8 @@ input::-moz-focus-inner {
   border-radius: 18px;
 }
 
-.learn-more-button:hover {
+.learn-more-button.GMB-button:hover{
+  border: 1px solid white;
   background-color: #0f0e0e;
   color: white;
 }
@@ -873,7 +874,14 @@ input::-moz-focus-inner {
   background-color: #ffd1d2;
   color: #e65153;
 }
-
+.error{
+  padding-left: 5px;
+  color: #e65153!important;
+}
+.success{
+  padding-left: 5px;
+  color: #758c36!important;
+}
 .ss-success {
   background-color: #c8e675;
   color: #758c36;
@@ -1156,11 +1164,11 @@ input::-moz-focus-inner {
   position: relative;
   margin-bottom: 1.5rem;
 }
-.section-intro h1 {
+.section-intro h2 {
   font-family: "librebaskerville-bold", serif;
   font-size: 4.8rem;
   line-height: 1.375;
-  color: #151515;
+  color: #FFFFFF;
 }
 .section-intro h3 {
   font-family: "montserrat-bold", sans-serif;
@@ -1193,7 +1201,7 @@ input::-moz-focus-inner {
  * section-intro
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1024px) {
-  .section-intro h1 {
+  .section-intro h2 {
     font-size: 4.4rem;
   }
   .section-intro .lead {
@@ -1201,7 +1209,7 @@ input::-moz-focus-inner {
   }
 }
 @media only screen and (max-width: 768px) {
-  .section-intro h1 {
+  .section-intro h2 {
     font-size: 4rem;
   }
   .section-intro h3 {
@@ -1209,7 +1217,7 @@ input::-moz-focus-inner {
   }
 }
 @media only screen and (max-width: 600px) {
-  .section-intro h1 {
+  .section-intro h2 {
     font-size: 3.4rem;
   }
   .section-intro h3 {
@@ -1222,7 +1230,7 @@ input::-moz-focus-inner {
   }
 }
 @media only screen and (max-width: 400px) {
-  .section-intro h1 {
+  .section-intro h2 {
     font-size: 3.1rem;
   }
 }
@@ -1435,12 +1443,12 @@ header .header-logo a {
   border-top: 1px dotted rgba(255, 255, 255, 0.03);
 }
 #menu-nav-wrap .nav-list li a {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.80);
   display: block;
 }
 #menu-nav-wrap .nav-list li a:hover, 
 #menu-nav-wrap .nav-list li a:focus {
-  color: white;
+  color: #0f5fe9;
 }
 #menu-nav-wrap .header-social-list {
   list-style: none;
@@ -1454,11 +1462,11 @@ header .header-logo a {
   display: inline-block;
 }
 #menu-nav-wrap .header-social-list li a {
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.8);
 }
 #menu-nav-wrap .header-social-list li a:hover, 
 #menu-nav-wrap .header-social-list li a:focus {
-  color: white;
+  color: #0f5fe9;
 }
 #menu-nav-wrap .header-social-list li:last-child {
   margin: 0;
@@ -1505,9 +1513,15 @@ header .header-logo a {
   color: rgba(256,256,256 ,0.8);
 }
 #menu-nav-wrap .sponsor-text span {
-  color:#0f5fe9;
+  color: rgba(256,256,256 ,0.8);
+  text-decoration: underline;
+  transition: all 0.8s;
 }
-
+#menu-nav-wrap .sponsor-text span:hover {
+  color:#0f5fe9;
+  transition: all 0.8s;
+  font-size: 1.8rem;
+}
 /* menu is open */
 .menu-is-open #menu-nav-wrap {
   -webkit-transform: translateX(0);
@@ -1522,10 +1536,10 @@ header .header-logo a {
  * header section 
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
-  header .header-logo a {
-    width: 51px;
-    height: 24px;
-    background-size: 51px 24px;
+   header .header-logo a {
+      width: 106px;
+      height: 44px;
+      background-size: 101px 52px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -1646,7 +1660,7 @@ header .header-logo a {
   content: "";
   width: 2px;
   height: 42px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 12px;
@@ -1660,7 +1674,7 @@ header .header-logo a {
 .home-social-list li a:hover, 
 .home-social-list li a:focus, 
 .home-social-list li a:active {
-  color: #151515;
+  color: #0f5fe9;
 }
 
 /* book now */
@@ -1700,7 +1714,7 @@ header .header-logo a {
   padding-left: 9px;
 }
 .scrolldown a:hover, .scrolldown a:focus, .scrolldown a:active {
-  color: #151515 !important;
+  color: #0857e0 !important;
 }
 
 html[data-useragent*='MSIE 10.0'] .scrolldown,
@@ -1751,12 +1765,23 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * responsive:
  * home section 
  * ------------------------------------------------------------------- */
+
 @media only screen and (max-width: 1200px) {
   .home-content-tablecell h3 {
     font-size: 2.1rem;
   }
   .home-content-tablecell h1 {
     font-size: 7rem;
+  }
+}
+ @media only screen and (max-width: 1100px){
+  header .header-logo a {
+    width: 133px;
+    height: 34px;
+    background-size: 111px 42px;
+  }
+  #home video {
+    max-width: 200%;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -1796,6 +1821,11 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
     right: 10px;
   }
 }
+@media only screen and (max-width: 700px){
+  #home video {
+    max-width: 290%;
+  }
+}
 @media only screen and (max-width: 600px) {
   #home {
     min-height: 702px;
@@ -1831,6 +1861,14 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   }
   .home-social-list::before {
     height: 24px;
+  }
+    header .header-logo a {
+      width: 86px;
+      height: 24px;
+      background-size: 81px 32px;
+  }
+  #home video {
+    max-width: 400%;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -2109,10 +2147,10 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  *
  * ------------------------------------------------------------------- */
 #portfolio {
-  background: #FFFFFF;
+  background: #111111;
   min-height: 800px;
   position: relative;
-  padding: 0;
+  padding: 0 0 9rem 0;
 }
 #portfolio .intro-wrap {
   padding: 15rem 0 21rem;
@@ -2144,14 +2182,14 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   margin: 0;
 }
 #portfolio .bricks-wrapper .brick:nth-child(2n+1) {
-  clear: both;
-  border-left: 20px solid #111111;
+  /* clear: both; */
+  /* border-left: 20px solid #111111;
   border-top: 20px solid #111111;
-  border-bottom: 20px solid #111111;
+  border-bottom: 20px solid #111111; */
 }
 #portfolio .bricks-wrapper .brick:nth-child(2n) {
-  clear: both;
-  border: 20px solid #111111;
+  /* clear: both; */
+  /* border: 20px solid #111111; */
 }
 
 /* ------------------------------------------------------------------- 
@@ -2430,7 +2468,6 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   margin: 0 auto 1.2rem auto;
   display: block;
   border-radius: 50%;
-  vertical-align: middle;
 }
 #testimonial-slider .testimonial-author .author-info {
   display: inline-block;
@@ -2693,7 +2730,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   letter-spacing: .05rem;
   padding: .6rem 2rem .6rem 2rem;
   margin: 0;
-  color: #000000;
+  color: rgba(255, 255, 255, 0.8);
   background: #063c9b;
   border-radius: 3px;
 }
@@ -2708,21 +2745,21 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   content: "";
 }
 #contact form ::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.4);
 }
 #contact form :-moz-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.4);
   /* Firefox 18- */
 }
 #contact form ::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.4);
   /* Firefox 19+ */
 }
 #contact form :-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.4);
 }
 #contact form .placeholder {
-  color: rgba(255, 255, 255, 0.3) !important;
+  color: rgba(255, 255, 255, 0.4) !important;
 }
 
 #contact input[type="text"],
@@ -2980,8 +3017,6 @@ footer h4.h05::after {
 .footer-main #mc-form button {
   background-color: #063c9b;
   color: #000000;
-  width: 6rem;
-  height: 6rem;
   line-height: 6rem;
   margin: 0;
   padding: 0;
@@ -2993,15 +3028,9 @@ footer h4.h05::after {
   background-color: #0f5fe9;
   color: white;
 }
-.footer-main #mc-form button i {
-  font-size: 2.6rem;
-  line-height: 6rem;
-  margin: 0;
-  position: relative;
-  left: .2rem;
-}
+
 .footer-main #mc-form label {
-  color: #063c9b;
+  color: #0f5fe9;
   font-family: "montserrat-regular", sans-serif;
 }
 
@@ -3027,7 +3056,7 @@ footer h4.h05::after {
   display: none;
 }
 .x-logo{
-  color: #063c9b;
+  color: #0f5fe9;
 }
 
 .link-logo:hover .x-logo{
@@ -3207,7 +3236,111 @@ footer h4.h05::after {
 }
 
 /* ----------------------------- */
+#mc-form button{
+    border-radius: 50px;
+    background-color: #0f5fe9;
+    width: 150px;
+    height: 6rem;
+    padding: 0;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 
+}
+#mc-form button:hover{
+  background-color: #0f5fe9;
+  color: white;
+
+}
+#mc-email{
+  margin-top: 0.15rem;
+  height: 5.6rem;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  border: 1px solid transparent;
+}
+
+#mc-email:focus, #mc-email:hover{
+  color: white;
+  border: grey;
+  background-color: #0F1215;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  border: 2px solid rgba(15,95,233,0.5);
+}
+
+#mc-email form ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+#mc-email form :-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  /* Firefox 18- */
+}
+#mc-email form ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  /* Firefox 19+ */
+}
+#mc-email form :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+#mc-email::placeholder {
+        color: rgba(255, 255, 255, 0.4) !important;
+    }
+.list-links {
+    list-style: none;
+    padding: 0;
+}
+
+.list-links li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.list-links li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.list-links i {
+    margin: 1rem 0;
+    font-size: 24px; /* Adjust icon size */
+    width: 40px; /* Set width for better alignment */
+    color: white; /* Initial icon color */
+    transition: color 0.3s ease; /* Transition for color change */
+    text-align: center;
+}
+
+.list-links li a:hover i.fa-linkedin { color: #0077b5; }
+.list-links li a:hover i.fa-instagram { color: #C13584; }
+.list-links li a:hover i.fa-facebook { color: #3b5998; }
+
+.list-links li a .social-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0px; /* Distance from icon */
+    white-space: nowrap;
+    background-color: rgba(255, 255, 255, 0.7); /* Background color with some transparency */
+    padding: 5px 15px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the background */
+    transition: opacity 0.3s ease, visibility 0.3s ease, left 0.3s ease, background-color 0.3s ease;
+    margin-left: 0px;
+    text-align: center;
+    width: 150px;
+}
+
+.list-links li a:hover .social-text {
+    visibility: visible;
+    opacity: 1;
+    left: 40px;
+}
+
+.list-links li a:hover .x-linkedin{ background-color: #0077b5; }
+.list-links li a:hover .x-instagram{ background-color: #C13584; }
+.list-links li a:hover .x-facebook{ background-color: #3b5998; }
 /* ------------------------------------------------------------------- 
  * responsive:
  * footer
@@ -3237,6 +3370,7 @@ footer h4.h05::after {
     left: 50%;
     margin-left: -50px;
   }
+  
 }
 @media only screen and (max-width: 600px) {
   .footer-bottom {
@@ -3247,5 +3381,11 @@ footer h4.h05::after {
   }
   .footer-bottom .copyright span::after {
     display: none;
+  }
+  .appointment button.learn-more .circle {
+    height: 2.6rem;
+  }  
+  .appointment button.learn-more .button-text {
+    line-height: 2.4;
   }
 }
