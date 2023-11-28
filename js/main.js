@@ -100,11 +100,11 @@
           margin: 30,
         },
         600: {
-          items: 4,
+          items: 3,
           margin: 40,
         },
         1000: {
-          items: 6,
+          items: 3,
         },
       },
     });
