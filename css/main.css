@@ -3360,10 +3360,24 @@ footer h4.h05::after {
  * responsive:
  * footer
  * ------------------------------------------------------------------- */
+.datasearch-image{
+  margin-top: 3rem;
+}
+.link-logo .x-logo{
+  display: inline;
+}
 @media only screen and (max-width: 768px) {
   #go-top {
     bottom: 0;
     right: 0;
+  }
+  .list-links li a .social-text {
+      top: 40px;
+      right: 60px;
+  }
+  .footer-main ul {
+    display: flex;
+    justify-content: center;
   }
 
   .footer-main {
@@ -3388,6 +3402,13 @@ footer h4.h05::after {
   
 }
 @media only screen and (max-width: 600px) {
+  .datasearch-image{
+    margin-top: 1.5rem;
+  }
+  #mc-email {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
   .footer-bottom {
     padding-bottom: .6rem;
   }
@@ -3398,7 +3419,7 @@ footer h4.h05::after {
     display: none;
   }
   .appointment button.learn-more .circle {
-    height: 2.6rem;
+    height: 2.9rem;
   }  
   .appointment button.learn-more .button-text {
     line-height: 2.4;
