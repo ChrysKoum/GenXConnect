@@ -370,7 +370,7 @@
       var screenWidth = window.innerWidth;
       if (screenWidth <= 768) {
         // Assuming 768px as a breakpoint for mobile devices
-        learnMoreButton.href = "PDF/Google My business Phone";
+        learnMoreButton.href = "PDF/Google My business Phone.pdf";
       } else {
         learnMoreButton.href = "PDF/Google My Business.pdf";
       }
