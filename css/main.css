@@ -2086,6 +2086,15 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   display: inline-block;
   margin-bottom: 1.5rem;
 }
+
+/* Changed the button seetings - George */
+
+#services .services-list .button-containerr {
+  margin-top: 6rem;
+}
+
+/* ------------------------------------- */
+
 #services .services-list .WD .icon{
   margin-top: 3rem;
   margin-bottom: 2.5rem;
